@@ -1,2 +1,1 @@
-# hello-world
-just another repository
+# Code for "Bayesian Assessment for Lorenz and Stochastic Dominance"
