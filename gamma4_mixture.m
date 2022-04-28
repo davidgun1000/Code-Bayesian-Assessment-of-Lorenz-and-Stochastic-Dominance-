@@ -1,7 +1,7 @@
 %GAMMA MIX - 4 COMPONENTSto obtain Table 3
 %--------------------------------------------------------
 function [out] = gamma4_mixture(k_P)
- 
+ %this function generates the posterior draws for mixture of gamma using MCMC method
  load('data_dominance_paper.mat');% load the dataset
  x = income_1999_perm(:,1);
  x = x(1:round(10/10*length(x)));
