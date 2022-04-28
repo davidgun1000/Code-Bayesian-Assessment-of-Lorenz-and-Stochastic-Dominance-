@@ -1,6 +1,6 @@
 % a main program for assessing Lorenz and stochastic dominance
 load('gamma4_1999.mat'); % load the draws for mixture of gamma
-load('gamma4_2002.mat');
+load('gamma4_2002.mat'); % load the draws for mixture of gamma
 drawsx = [W1_1999 W2_1999 W3_1999 W4_1999 M1_1999 M2_1999 M3_1999 M4_1999 V1_1999 V2_1999 V3_1999 V4_1999];
 drawsy = [W1_2002 W2_2002 W3_2002 W4_2002 M1_2002 M2_2002 M3_2002 M4_2002 V1_2002 V2_2002 V3_2002 V4_2002];
 %parameter for dist x
@@ -188,7 +188,7 @@ for j = 1:1000
     overall_yFSDx_10lowest(j,1) = mean(prod(yFSDx(:,1:100),2));
     
 end
-
+%obtain the posterior probability estimates
 mean_prop_xGLDy = mean(prop_xGLDy);
 mean_prop_yGLDx = mean(prop_yGLDx);
 mean_overall_xGLDy = mean(overall_xGLDy);
