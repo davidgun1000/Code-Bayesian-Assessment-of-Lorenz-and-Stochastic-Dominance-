@@ -7,4 +7,8 @@ The main code is dominance_prog_gamma.m.
 The main code will generate the posterior probabilities of Lorenz and stochastic dominance. 
 Please read the paper for more information.
 The user needs to supply their own data.
-It requires a .mat file with two variables, one for the income variable and one for the sampling weight.
+
+data_dominance_paper.mat is an example of the required data for this package. 
+First, for each year, you need to use gamma_mixture4.m to give the posterior draws of the parameters of mixture of gamma.
+Second, using the posterior draws obtained from the first step, you then use dominance_prog_gamma.m to obtain the posterior 
+probabilities of Lorenz and stochastic dominance
