@@ -1,15 +1,25 @@
 # Code-Bayesian-Assessment-of-Lorenz-and-Stochastic-Dominance-
-Code for Bayesian Assessment of Lorenz and stochastic dominance
+This repository contains the code associated with the paper:
+"Bayesian Assessment of Lorenz and Stochastic Dominance"
+by David Gunawan, William Griffiths, and Duangkamon Chotikapanich,
+Canadian Journal of Economics, 2020, Vol. 53(2), pp. 767–799.
 
-This is the code for the paper "Bayesian assessement of Lorenz and stochastic dominance"
-David Gunawan, William Griffiths, and Duangkamon Chotikapanich (2020) Canadian Journal of Economics, 53 (2), 767-799.
-The main code is dominance_prog_gamma.m.
-The main code will generate the posterior probabilities of Lorenz and stochastic dominance. 
-Please read the paper for more information.
-The user needs to supply their own data.
+The primary script is dominance_prog_gamma.m, which computes the posterior probabilities of Lorenz and stochastic dominance.
+For further details on the methodology and interpretation, please refer to the published paper.
 
-data_dominance_paper.mat is an example of the required data for this package. 
-First, for each year, you need to use gamma_mixture4.m to give the posterior draws of the parameters of mixture of gamma. The files gamma4_1999.mat, gamma4_2002.mat,
-gamma4_2005.mat, and gamma4_2008.mat are the examples.
-Second, using the posterior draws obtained from the first step, you then use dominance_prog_gamma.m to obtain the posterior 
-probabilities of Lorenz and stochastic dominance.
+### 1. Prepare Your Data
+
+- Provide your own dataset in the required format.
+
+### 2. Generate Posterior Draws of Gamma Mixture Parameters
+
+- Use 'gamma_mixture4.m' to estimate the parameters of a 4-component gamma mixture model for each year or subgroup.
+- Example output files: 'gamma4_1999.mat', 'gamma4_2002.mat', etc.
+
+### 3. Compute Posterior Probabilities of Dominance
+
+- Use the posterior draws from Step 2 as input into 'dominance_prog_gamma.m'.
+- The script will compute the posterior probabilities of:
+  - Lorenz dominance
+  - First-order stochastic dominance
+  - Second-order stochastic dominance
